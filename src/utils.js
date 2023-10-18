@@ -12,4 +12,13 @@ function saveTaskToLocalStorage(state) {
 const getTasksFromLocalStorage = () => {
   return JSON.parse(localStorage.getItem("tasks")) ?? [];
 };
-export { saveTaskToLocalStorage, getTasksFromLocalStorage };
+
+const setTasksToLocalStorage = (tasks) => {
+  const serializedState = JSON.stringify(tasks);
+  localStorage.setItem("tasks", serializedState);
+};
+export {
+  saveTaskToLocalStorage,
+  getTasksFromLocalStorage,
+  setTasksToLocalStorage,
+};

@@ -19,14 +19,6 @@ const PUBLIC_ROUTES = [
 ];
 
 export default function Router() {
-  let element = useRoutes([
-    // {
-    //   path: "/",
-    //   element: <ListTasks />,
-    //   children: PUBLIC_ROUTES,
-    // },
-    ...PUBLIC_ROUTES,
-  ]);
-  console.log(element);
+  let element = useRoutes([...PUBLIC_ROUTES]);
   return element;
 }
